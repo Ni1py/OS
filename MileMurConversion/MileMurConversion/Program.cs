@@ -21,6 +21,8 @@ namespace MileMurConversion
             {
                 WriteMatrix(writer, MooreToMealy(ReadMatrix(reader)));
             }
+            writer.Dispose();
+            reader.Dispose();
         }
 
        private static List<List<string>> ReadMatrix(StreamReader reader)

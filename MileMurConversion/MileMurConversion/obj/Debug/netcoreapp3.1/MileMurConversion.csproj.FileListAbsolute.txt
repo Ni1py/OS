@@ -11,3 +11,4 @@ C:\Users\USER\Documents\University\OS\MileMurConversion\MileMurConversion\obj\De
 C:\Users\USER\Documents\University\OS\MileMurConversion\MileMurConversion\obj\Debug\netcoreapp3.1\MileMurConversion.dll
 C:\Users\USER\Documents\University\OS\MileMurConversion\MileMurConversion\obj\Debug\netcoreapp3.1\MileMurConversion.pdb
 C:\Users\USER\Documents\University\OS\MileMurConversion\MileMurConversion\obj\Debug\netcoreapp3.1\MileMurConversion.genruntimeconfig.cache
+C:\Users\USER\Documents\University\OS\MileMurConversion\MileMurConversion\obj\Debug\netcoreapp3.1\MileMurConversion.csproj.AssemblyReference.cache

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MileMurConversion": {
+      "commandName": "Project",
+      "commandLineArgs": "moore-to-mealy input.csv output.csv"
+    }
+  }
+}

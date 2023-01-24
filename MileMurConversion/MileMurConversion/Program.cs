@@ -52,12 +52,10 @@ namespace MileMurConversion
                     if (i == matrix[j].Count - 1)
                     {
                         writer.WriteLine(matrix[j][i].Split(';')[0]);
-                        Console.WriteLine(matrix[j][i].Split(';')[0]);
                     }
                     else
                     {
                         writer.Write(matrix[j][i]);
-                        Console.Write(matrix[j][i]);
                     }
                 }
             }

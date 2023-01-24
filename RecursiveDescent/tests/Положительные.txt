@@ -1,0 +1,180 @@
+1) Проверочный тест из задания
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+2) Проверка на произвольно поставленные пробелы, табы, переносы строк
+
+	PROG  id 
+   VAR id,id,id : int;
+	BEGIN
+  READ(id,  id);
+Id := id+
+num*-( -num+id*id*    -num*( id+-num));
+	WRITE   (id,   id,id);
+END
+
+3) Проверка на нижний регистр
+
+prog id 
+var id, id, id : int;
+begin
+read(id,id);
+id:= id+num*-(-num+id*id*-num*( id+-num));
+write(id,id,id);
+end
+
+4) Проверка на верхний регистр
+
+PROG ID 
+VAR ID, ID, ID : INT;
+BEGIN
+READ(ID,ID);
+ID:= ID+NUM*-(-NUM+ID*ID*-NUM*( ID+-NUM));
+WRITE(ID,ID,ID);
+END
+
+5) Проверка одного значения в VAR
+
+PROG id 
+VAR id : int;
+BEGIN
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+6) Проверка объявления переменных типа float
+
+PROG id 
+VAR id, id, id : float;
+BEGIN
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+7) Проверка объявления переменных типа bool
+
+PROG id 
+VAR id, id, id : bool;
+BEGIN
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+8) Проверка объявления переменных типа string
+
+PROG id 
+VAR id, id, id : string;
+BEGIN
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+9) Проверка оператора READ
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id);
+END
+
+10) Проверка оператора WRITE
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+WRITE(id,id,id);
+END
+
+11) Проверка списка операторов
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+END
+
+12) Проверка нескольких операторов каждого вида
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+13) Проверка READ с 1 аргументом
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+14) Проверка READ с несколькими аргументами
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+15) Проверка WRITE с 1 аргументом
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id);
+END
+
+16) Проверка WRITE с несколькими аргументами
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id);
+Id:= id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
+
+17) Проверка нескольких "-" подряд
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id);
+Id := ---id;
+WRITE(id,id,id);
+END
+
+18) Проверка выражения используя несколько пар скобок
+
+PROG id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id);
+Id := (((id)));
+WRITE(id,id,id);
+END
+
+19) Проверка записи в одну строку c пробелами
+PROG id VAR id,id,id:int;BEGIN READ(id,id);Id:=id+num*-(-num+id*id*-num*(id+-num));WRITE(id,id,id);END

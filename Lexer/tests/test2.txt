@@ -1,0 +1,29 @@
+int main()
+{
+    const bool bl = true;
+    vector int v = {0.1, 22.12, 34.0}
+    for(auto i = 0.1; i < 2.1; i+1)
+    {
+       if(bl)
+       {
+           bl = false;
+           v[1] = 7;
+           continue;
+       }
+       else
+       {
+            break;
+       }
+    }
+    int intI = 0;
+    while(intI <= 5)
+    {
+        intI = intI + 1;
+        intI = intI / 1;
+        intI=intI/1;
+        intI = intI * 2;
+        intI = intI^2;
+        intI = intI - 1;
+    }
+    rerurn 0;
+}

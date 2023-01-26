@@ -1,0 +1,9 @@
+// Hello comment
+struct Struct1 
+{
+    int index;
+}
+int main   // Hello comment 2
+{
+    return 0;
+}

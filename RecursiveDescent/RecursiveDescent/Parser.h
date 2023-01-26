@@ -6,7 +6,7 @@
 class Parser
 {
 private:
-	std::string CreateMsg(std::string expected, std::string found, size_t pos);
+	std::string CreateErrorDescription(std::string expected, std::string found, size_t pos);
 
 	void OpenBracket(Token token);
 

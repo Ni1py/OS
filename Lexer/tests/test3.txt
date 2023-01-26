@@ -1,0 +1,37 @@
+using namespace std
+
+void Read()
+{
+    cout << "read";
+}
+
+int main()
+{
+    if(1 > 2)
+    {
+    }
+    if(1 >= 2)
+    {
+    }
+    if(1 <= 2)
+    {
+    }
+    if(1 => 2)
+    {
+    }
+    if(1 =< 2)
+    {
+    }
+    if(1 < 2)
+    {
+    }
+    if(false && true)
+    {
+    }
+    if(true || true)
+    {
+    }
+    if(1 == 2)
+    {
+    }
+}

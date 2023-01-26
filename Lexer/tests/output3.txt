@@ -1,0 +1,91 @@
+using --- Keyword --- line 1
+namespace --- Keyword --- line 1
+std --- Keyword --- line 1
+void --- Type --- line 3
+Read --- Identifier --- line 3
+( --- Separator --- line 3
+) --- Separator --- line 3
+{ --- Separator --- line 4
+cout --- Keyword --- line 5
+<< --- Operator output --- line 5
+"read" --- String --- line 5
+; --- Separator --- line 5
+} --- Separator --- line 6
+int --- Type --- line 8
+main --- Identifier --- line 8
+( --- Separator --- line 8
+) --- Separator --- line 8
+{ --- Separator --- line 9
+if --- Keyword --- line 10
+( --- Separator --- line 10
+1 --- Number --- line 10
+> --- Logical operation --- line 10
+2 --- Number --- line 10
+) --- Separator --- line 10
+{ --- Separator --- line 11
+} --- Separator --- line 12
+if --- Keyword --- line 13
+( --- Separator --- line 13
+1 --- Number --- line 13
+>= --- Logical operation --- line 13
+2 --- Number --- line 13
+) --- Separator --- line 13
+{ --- Separator --- line 14
+} --- Separator --- line 15
+if --- Keyword --- line 16
+( --- Separator --- line 16
+1 --- Number --- line 16
+<= --- Logical operation --- line 16
+2 --- Number --- line 16
+) --- Separator --- line 16
+{ --- Separator --- line 17
+} --- Separator --- line 18
+if --- Keyword --- line 19
+( --- Separator --- line 19
+1 --- Number --- line 19
+=> --- Logical operation --- line 19
+2 --- Number --- line 19
+) --- Separator --- line 19
+{ --- Separator --- line 20
+} --- Separator --- line 21
+if --- Keyword --- line 22
+( --- Separator --- line 22
+1 --- Number --- line 22
+=< --- Logical operation --- line 22
+2 --- Number --- line 22
+) --- Separator --- line 22
+{ --- Separator --- line 23
+} --- Separator --- line 24
+if --- Keyword --- line 25
+( --- Separator --- line 25
+1 --- Number --- line 25
+< --- Logical operation --- line 25
+2 --- Number --- line 25
+) --- Separator --- line 25
+{ --- Separator --- line 26
+} --- Separator --- line 27
+if --- Keyword --- line 28
+( --- Separator --- line 28
+false --- Keyword --- line 28
+&& --- Logical operation --- line 28
+true --- Keyword --- line 28
+) --- Separator --- line 28
+{ --- Separator --- line 29
+} --- Separator --- line 30
+if --- Keyword --- line 31
+( --- Separator --- line 31
+true --- Keyword --- line 31
+|| --- Logical operation --- line 31
+true --- Keyword --- line 31
+) --- Separator --- line 31
+{ --- Separator --- line 32
+} --- Separator --- line 33
+if --- Keyword --- line 34
+( --- Separator --- line 34
+1 --- Number --- line 34
+== --- Logical operation --- line 34
+2 --- Number --- line 34
+) --- Separator --- line 34
+{ --- Separator --- line 35
+} --- Separator --- line 36
+} --- Separator --- line 37

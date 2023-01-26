@@ -1,0 +1,16 @@
+// Hello comment --- Comment --- line 1
+struct --- Keyword --- line 2
+Struct1 --- Identifier --- line 2
+{ --- Separator --- line 3
+int --- Type --- line 4
+index --- Identifier --- line 4
+; --- Separator --- line 4
+} --- Separator --- line 5
+// Hello comment 2 --- Comment --- line 6
+int --- Type --- line 6
+main --- Identifier --- line 6
+{ --- Separator --- line 7
+return --- Keyword --- line 8
+0 --- Number --- line 8
+; --- Separator --- line 8
+} --- Separator --- line 9

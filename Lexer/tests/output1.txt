@@ -1,0 +1,41 @@
+int --- Type --- line 1
+main --- Identifier --- line 1
+( --- Separator --- line 1
+) --- Separator --- line 1
+{ --- Separator --- line 2
+string --- Type --- line 3
+name --- Identifier --- line 3
+; --- Separator --- line 3
+cin --- Keyword --- line 4
+>> --- Operator input --- line 4
+name --- Identifier --- line 4
+; --- Separator --- line 4
+cout --- Keyword --- line 5
+<< --- Operator output --- line 5
+"Hello, " --- String --- line 5
+<< --- Operator output --- line 5
+name --- Identifier --- line 5
+"!" --- String --- line 5
+<< --- Operator output --- line 5
+endl --- Keyword --- line 5
+; --- Separator --- line 5
+if --- Keyword --- line 6
+( --- Separator --- line 6
+name --- Identifier --- line 6
+!= --- Logical operation --- line 6
+"Diana" --- String --- line 6
+) --- Separator --- line 6
+{ --- Separator --- line 7
+return --- Keyword --- line 8
+1 --- Number --- line 8
+; --- Separator --- line 8
+} --- Separator --- line 9
+char --- Type --- line 10
+ch --- Identifier --- line 10
+= --- Assignment operator --- line 10
+'3' --- Char --- line 10
+; --- Separator --- line 10
+return --- Keyword --- line 11
+0 --- Number --- line 11
+; --- Separator --- line 11
+} --- Separator --- line 12

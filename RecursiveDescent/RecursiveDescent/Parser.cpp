@@ -6,7 +6,7 @@ Parser::Parser(string str) : tokenManager(CTokenManager(str))
 {
 }
 
-string Parser::CreateMsg(string expected, string found, size_t pos)
+string Parser::CreateErrorDescription(string expected, string found, size_t pos)
 {
 	return "Expected: " + expected + " found: '" + found + "' position: " + to_string(pos) + "\n";
 }
@@ -14,57 +14,57 @@ string Parser::CreateMsg(string expected, string found, size_t pos)
 void Parser::OpenBracket(Token token)
 {
 	if (token.type != Type::OpenBracket)
-		throw CreateMsg("'('", token.value, tokenManager.pos);
+		throw CreateErrorDescription("'('", token.value, tokenManager.pos);
 }
 
 void Parser::ClosedBracket(Token token)
 {
 	if (token.type != Type::ClosedBracket)
-		throw CreateMsg("')'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("')'", token.value, tokenManager.pos);
 }
 
 void Parser::Semicolon(Token token)
 {
 	if (token.type != Type::Semicolon)
-		throw CreateMsg("';'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("';'", token.value, tokenManager.pos);
 }
 
 void Parser::Colon(Token token)
 {
 	if (token.type != Type::Colon)
-		throw CreateMsg("':'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("':'", token.value, tokenManager.pos);
 }
 
 void Parser::Equal(Token token)
 {
 	if (token.type != Type::Equal)
-		throw CreateMsg("'='", token.value, tokenManager.pos);
+		throw CreateErrorDescription("'='", token.value, tokenManager.pos);
 }
 
 void Parser::Id(Token token, string name)
 {
 	if (name != "")
 		if (token.type != Type::Identifier && token.value != name)
-			throw CreateMsg(name, token.value, tokenManager.pos);
-	else
-		if (token.type != Type::Identifier)
-			throw CreateMsg("Identifier", token.value, tokenManager.pos);
+			throw CreateErrorDescription(name, token.value, tokenManager.pos);
+		else
+			if (token.type != Type::Identifier)
+				throw CreateErrorDescription("Identifier", token.value, tokenManager.pos);
 }
 
 void Parser::Begin(Token token)
 {
 	if (token.type != Type::Begin)
-		throw CreateMsg("'begin'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("'begin'", token.value, tokenManager.pos);
 }
 
 void Parser::End(Token token)
 {
 	if (token.type != Type::End)
-		throw CreateMsg("'end'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("'end'", token.value, tokenManager.pos);
 
 	token = tokenManager.GetNextToken();
 	if (token.type != Type::EndF)
-		throw CreateMsg("", token.value, tokenManager.pos);
+		throw CreateErrorDescription("", token.value, tokenManager.pos);
 }
 
 void Parser::IDList(Token token)
@@ -84,13 +84,13 @@ void Parser::IDList(Token token)
 void Parser::DataType(Token token)
 {
 	if (token.type != Type::Type)
-		throw CreateMsg("Type", token.value, tokenManager.pos);
+		throw CreateErrorDescription("Type", token.value, tokenManager.pos);
 }
 
 void Parser::Var(Token token)
 {
 	if (token.type != Type::Var)
-		throw CreateMsg("'var'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("'var'", token.value, tokenManager.pos);
 
 	IDList(tokenManager.GetNextToken());
 
@@ -106,7 +106,7 @@ void Parser::Assign(Token token)
 	Id(token, "id");
 	Colon(tokenManager.GetNextToken());
 	if (isspace(tokenManager.code[tokenManager.pos]))
-		throw CreateMsg("':='", ":", tokenManager.pos);
+		throw CreateErrorDescription("':='", ":", tokenManager.pos);
 	Equal(tokenManager.GetNextToken());
 
 	token = tokenManager.GetNextToken();
@@ -118,7 +118,7 @@ void Parser::Assign(Token token)
 		Exp(token);
 		break;
 	default:
-		throw CreateMsg("Identifier or '(' or '-'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("Identifier or '(' or '-'", token.value, tokenManager.pos);
 	}
 }
 
@@ -141,11 +141,11 @@ void Parser::Exp(Token token)
 			tokenManager.pos--;
 			break;
 		default:
-			throw CreateMsg("'+' or ')' or ';'", token.value, tokenManager.pos);
+			throw CreateErrorDescription("'+' or ')' or ';'", token.value, tokenManager.pos);
 		}
 		break;
 	default:
-		throw CreateMsg("Identifier or '(' or '-'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("Identifier or '(' or '-'", token.value, tokenManager.pos);
 	}
 }
 
@@ -169,11 +169,11 @@ void Parser::T(Token token)
 			tokenManager.pos--;
 			break;
 		default:
-			throw CreateMsg("'*' or '+' or ')' or ';'", token.value, tokenManager.pos);
+			throw CreateErrorDescription("'*' or '+' or ')' or ';'", token.value, tokenManager.pos);
 		}
 		break;
 	default:
-		throw CreateMsg("Identifier or '(' or '-'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("Identifier or '(' or '-'", token.value, tokenManager.pos);
 	}
 }
 
@@ -191,7 +191,7 @@ void Parser::F(Token token)
 		F(tokenManager.GetNextToken());
 		break;
 	default:
-		throw CreateMsg("Identifier or '(' or '-'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("Identifier or '(' or '-'", token.value, tokenManager.pos);
 	}
 }
 
@@ -213,7 +213,7 @@ void Parser::St(Token token)
 	else if (token.type == Type::Identifier)
 		Assign(token);
 	else
-		throw CreateMsg("Statement", token.value, tokenManager.pos);
+		throw CreateErrorDescription("Statement", token.value, tokenManager.pos);
 }
 
 void Parser::ListSt(Token token)
@@ -234,7 +234,7 @@ void Parser::ListSt(Token token)
 void Parser::Prog(Token token)
 {
 	if (token.type != Type::Prog)
-		throw CreateMsg("'prog'", token.value, tokenManager.pos);
+		throw CreateErrorDescription("'prog'", token.value, tokenManager.pos);
 
 	Id(tokenManager.GetNextToken(), "id");
 

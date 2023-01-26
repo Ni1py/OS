@@ -8,9 +8,14 @@ Id:= id+num*-(-num+id*id*-num*( id+-num))
 WRITE(id,id,id)
 END
 
-2) Проверка записи в одну строку без пробелов
-
-PROGidVARid,id,id:int;BEGINREAD(id,id);Id:=id+num*-(-num+id*id*-num*(id+-num));WRITE(id,id,id);END
+2) В символе := пробел между : и =
+PROG  end id 
+VAR id, id, id : int;
+BEGIN
+READ(id,id);
+Id : = id+num*-(-num+id*id*-num*( id+-num));
+WRITE(id,id,id);
+END
 
 3) Проверка пустого VAR
 
@@ -22,7 +27,11 @@ Id:= id+num*-(-num+id*id*-num*( id+-num));
 WRITE(id,id,id);
 END
 
-4) Проверка переменной в VAR, в названии которой присутствует число
+4) Проверка записи в одну строку без пробелов
+
+PROGidVARid,id,id:int;BEGINREAD(id,id);Id:=id+num*-(-num+id*id*-num*(id+-num));WRITE(id,id,id);END
+
+5) Проверка переменной в VAR, в названии которой присутствует число
 
 PROG id 
 VAR id1 : int;
@@ -32,7 +41,7 @@ Id:= id+num*-(-num+id*id*-num*( id+-num));
 WRITE(id,id,id);
 END
 
-5) Проверка значений в VAR, перечисленных без запятой
+6) Проверка значений в VAR, перечисленных без запятой
 
 PROG id 
 VAR id id id : int;
@@ -42,7 +51,7 @@ Id:= id+num*-(-num+id*id*-num*( id+-num));
 WRITE(id,id,id);
 END
 
-6) Проверка объявления переменных без указания типа
+7) Проверка объявления переменных без указания типа
 
 PROG id 
 VAR id, id, id : ;
@@ -52,7 +61,7 @@ Id:= id+num*-(-num+id*id*-num*( id+-num));
 WRITE(id,id,id);
 END
 
-7) Проверка шаблона без части VAR
+8) Проверка шаблона без части VAR
 
 PROG id 
 BEGIN
@@ -61,7 +70,7 @@ Id:= id+num*-(-num+id*id*-num*( id+-num));
 WRITE(id,id,id);
 END
 
-8) Проверка шаблона без части <LISTST>
+9) Проверка шаблона без части <LISTST>
 
 PROG id 
 VAR id, id, id : int;
@@ -69,7 +78,7 @@ BEGIN
 END
 
 
-9) Попытка передать в READ 0 аргументов
+10) Попытка передать в READ 0 аргументов
 
 PROG id 
 VAR id, id, id : int;
@@ -79,7 +88,7 @@ Id:= id+num*-(-num+id*id*-num*( id+-num));
 WRITE(id,id,id);
 END
 
-10) Проверка пустого присваивания в <ASSIGN>
+11) Проверка пустого присваивания в <ASSIGN>
 
 PROG id 
 VAR id, id, id : int;
@@ -89,7 +98,7 @@ Id := ;
 WRITE(id,id,id);
 END
 
-11) Проверка операции умножения используя несколько "*" подряд
+12) Проверка операции умножения используя несколько "*" подряд
 
 PROG id 
 VAR id, id, id : int;
@@ -99,7 +108,7 @@ Id := id***id;
 WRITE(id,id,id);
 END
 
-12) Проверка выражения, где количество открытых и закрытых скобок не совпадает
+13) Проверка выражения, где количество открытых и закрытых скобок не совпадает
 
 PROG id 
 VAR id, id, id : int;
@@ -109,7 +118,7 @@ Id := (((id));
 WRITE(id,id,id);
 END
 
-13) Проверка на лишние ";"
+14) Проверка на лишние ";"
 
 PROG id 
 VAR id, id, id : int;;
@@ -119,9 +128,9 @@ Id:= id+num*-(-num+id*id*-num*( id+-num));;
 WRITE(id,id,id);;
 END
 
-14) Проверка на пустой ввод
+15) Проверка на пустой ввод
 
-15) Дублирование End
+16) Дублирование End
 PROG id 
 VAR id, id, id : int;
 BEGIN
@@ -131,7 +140,7 @@ WRITE(id,id,id);
 END 
 END 
 
-16) Проверка отсутствия символов после end
+17) Проверка отсутствия символов после end
 PROG id 
 VAR id, id, id : int;
 BEGIN
@@ -141,7 +150,7 @@ WRITE(id,id,id);
 END 
 jh
 
-17) Попытка передать в WRITE 0 аргументов
+18) Попытка передать в WRITE 0 аргументов
 
 PROG id 
 VAR id, id, id : int;
@@ -151,7 +160,7 @@ Id:= id+num*-(-num+id*id*-num*( id+-num));
 WRITE();
 END
 
-18) Проверка отсутствия end
+19) Проверка отсутствия end
 
 prog id 
 var id, id, id : int;
@@ -160,21 +169,12 @@ read(id,id);
 id:= id+num*-(-num+id*id*-num*( id+-num));
 write(id,id,id);
 
-18) Между prog и id лишнее слово
+20) Между prog и id лишнее слово
 
 PROG  end id 
 VAR id, id, id : int;
 BEGIN
 READ(id,id);
 Id:= id+num*-(-num+id*id*-num*( id+-num));
-WRITE(id,id,id);
-END
-
-19) В символе := пробел между : и =
-PROG  end id 
-VAR id, id, id : int;
-BEGIN
-READ(id,id);
-Id : = id+num*-(-num+id*id*-num*( id+-num));
 WRITE(id,id,id);
 END

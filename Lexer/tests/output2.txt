@@ -1,0 +1,116 @@
+int --- Type --- line 1
+main --- Identifier --- line 1
+( --- Separator --- line 1
+) --- Separator --- line 1
+{ --- Separator --- line 2
+const --- Keyword --- line 3
+bool --- Type --- line 3
+bl --- Identifier --- line 3
+= --- Assignment operator --- line 3
+true --- Keyword --- line 3
+; --- Separator --- line 3
+vector --- Type --- line 4
+int --- Type --- line 4
+v --- Identifier --- line 4
+= --- Assignment operator --- line 4
+{ --- Separator --- line 4
+0.1 --- Number --- line 4
+, --- Separator --- line 4
+22.12 --- Number --- line 4
+, --- Separator --- line 4
+34.0 --- Number --- line 4
+} --- Separator --- line 4
+for --- Keyword --- line 5
+( --- Separator --- line 5
+auto --- Type --- line 5
+i --- Identifier --- line 5
+= --- Assignment operator --- line 5
+0.1 --- Number --- line 5
+; --- Separator --- line 5
+i --- Identifier --- line 5
+< --- Logical operation --- line 5
+2.1 --- Number --- line 5
+; --- Separator --- line 5
+i --- Identifier --- line 5
++ --- Arithmetic operator --- line 5
+1 --- Number --- line 5
+) --- Separator --- line 5
+{ --- Separator --- line 6
+if --- Keyword --- line 7
+( --- Separator --- line 7
+bl --- Identifier --- line 7
+) --- Separator --- line 7
+{ --- Separator --- line 8
+bl --- Identifier --- line 9
+= --- Assignment operator --- line 9
+false --- Keyword --- line 9
+; --- Separator --- line 9
+v --- Identifier --- line 10
+[ --- Separator --- line 10
+1 --- Number --- line 10
+] --- Separator --- line 10
+= --- Assignment operator --- line 10
+7 --- Number --- line 10
+; --- Separator --- line 10
+continue --- Keyword --- line 11
+; --- Separator --- line 11
+} --- Separator --- line 12
+else --- Keyword --- line 13
+{ --- Separator --- line 14
+break --- Keyword --- line 15
+; --- Separator --- line 15
+} --- Separator --- line 16
+} --- Separator --- line 17
+int --- Type --- line 18
+intI --- Identifier --- line 18
+= --- Assignment operator --- line 18
+0 --- Number --- line 18
+; --- Separator --- line 18
+while --- Keyword --- line 19
+( --- Separator --- line 19
+intI --- Identifier --- line 19
+<= --- Logical operation --- line 19
+5 --- Number --- line 19
+) --- Separator --- line 19
+{ --- Separator --- line 20
+intI --- Identifier --- line 21
+= --- Assignment operator --- line 21
+intI --- Identifier --- line 21
++ --- Arithmetic operator --- line 21
+1 --- Number --- line 21
+; --- Separator --- line 21
+intI --- Identifier --- line 22
+= --- Assignment operator --- line 22
+intI --- Identifier --- line 22
+/ --- Arithmetic operator --- line 22
+1 --- Number --- line 22
+; --- Separator --- line 22
+intI --- Identifier --- line 23
+= --- Assignment operator --- line 23
+intI --- Identifier --- line 23
+/ --- Arithmetic operator --- line 23
+1 --- Number --- line 23
+; --- Separator --- line 23
+intI --- Identifier --- line 24
+= --- Assignment operator --- line 24
+intI --- Identifier --- line 24
+* --- Arithmetic operator --- line 24
+2 --- Number --- line 24
+; --- Separator --- line 24
+intI --- Identifier --- line 25
+= --- Assignment operator --- line 25
+intI --- Identifier --- line 25
+^ --- Arithmetic operator --- line 25
+2 --- Number --- line 25
+; --- Separator --- line 25
+intI --- Identifier --- line 26
+= --- Assignment operator --- line 26
+intI --- Identifier --- line 26
+- --- Arithmetic operator --- line 26
+1 --- Number --- line 26
+; --- Separator --- line 26
+} --- Separator --- line 27
+rerurn --- Identifier --- line 28
+0 --- Number --- line 28
+; --- Separator --- line 28
+} --- Separator --- line 29

@@ -51,22 +51,6 @@ void Parser::Id(Token token, string name)
 				throw CreateErrorDescription("Identifier", token.value, tokenManager.pos);
 }
 
-void Parser::Begin(Token token)
-{
-	if (token.type != Type::Begin)
-		throw CreateErrorDescription("'begin'", token.value, tokenManager.pos);
-}
-
-void Parser::End(Token token)
-{
-	if (token.type != Type::End)
-		throw CreateErrorDescription("'end'", token.value, tokenManager.pos);
-
-	token = tokenManager.GetNextToken();
-	if (token.type != Type::EndF)
-		throw CreateErrorDescription("", token.value, tokenManager.pos);
-}
-
 void Parser::IDList(Token token)
 {
 	Id(token, "id");
@@ -240,9 +224,23 @@ void Parser::Prog(Token token)
 
 	Var(tokenManager.GetNextToken());
 
-	Begin(tokenManager.GetNextToken());
+	//begin
+
+	token = tokenManager.GetNextToken();
+
+	if (token.type != Type::Begin)
+		throw CreateErrorDescription("'begin'", token.value, tokenManager.pos);
 
 	ListSt(tokenManager.GetNextToken());
 
-	End(tokenManager.GetNextToken());
+	//end
+
+	token = tokenManager.GetNextToken();
+
+	if (token.type != Type::End)
+		throw CreateErrorDescription("'end'", token.value, tokenManager.pos);
+
+	token = tokenManager.GetNextToken();
+	if (token.type != Type::EndF)
+		throw CreateErrorDescription("", token.value, tokenManager.pos);
 }

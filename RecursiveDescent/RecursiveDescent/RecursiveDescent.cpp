@@ -25,7 +25,7 @@ int main()
 	try
 	{
 		parser.Prog(parser.tokenManager.GetNextToken());
-		cout << "No errors";
+		cout << "The code is correct!";
 	}
 	catch (const string msg)
 	{

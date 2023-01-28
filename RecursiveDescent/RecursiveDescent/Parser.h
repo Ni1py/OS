@@ -20,10 +20,6 @@ private:
 
 	void Id(Token token, std::string name = "");
 
-	void Begin(Token token);
-
-	void End(Token token);
-
 	void IDList(Token token);
 
 	void DataType(Token token);
